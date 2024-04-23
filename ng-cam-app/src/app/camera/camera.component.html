@@ -1,0 +1,17 @@
+<!-- <div>
+    <button (click)="capture()">Capture</button>
+    <video #videoPlayer width="400" height="300"></video>
+    <canvas #canvas width="400" height="300" style="display:none;"></canvas>
+    <div *ngIf="capturedImage">
+        <h2>Captured Image:</h2>
+        <img [src]="capturedImage" alt="Captured Image">
+    </div>
+</div> -->
+
+<div>
+    <button (click)="capture()">Capture</button>
+    <div #container style="position: relative;">
+      <canvas #canvas width="400" height="300" style="border: 1px solid black;"></canvas>
+      <div #resizeHandle class="resize-handle" (mousedown)="startResize($event)"></div>
+    </div>
+  </div>
